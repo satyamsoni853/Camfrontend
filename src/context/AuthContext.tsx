@@ -7,6 +7,7 @@ interface User {
   uid: string;
   username: string;
   email: string;
+  avatar_color?: string;
 }
 
 interface AuthContextType {
