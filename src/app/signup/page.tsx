@@ -6,10 +6,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Loader from "@/components/Loader";
 
-const API =
-  typeof window !== "undefined"
-    ? `http://${window.location.hostname}:8000`
-    : "http://localhost:8000";
+const API = process.env.NEXT_PUBLIC_API_URL || "https://cambackend.onrender.com";
 
 export default function SignupPage() {
   const { login } = useAuth();
